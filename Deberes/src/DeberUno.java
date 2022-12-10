@@ -15,6 +15,7 @@ public class DeberUno {
         System.out.println("Reglas");
         System.out.println("El lobo no se puede quedar solo con la caperucita porque la come");
         System.out.println("Caperucita no se puede quedar sola con las uvas porque las come");
+        System.out.println("Si consideras terminar el juego, digita un numero diferente a los pedidos");
         while(bandera == true){
             System.out.println("Digite 1 si desea cruzar de izquierda a derecha al observador y uvas");
             System.out.println("Digite 2 si desea cruzar de izquierda a derecha al observador y lobo");
@@ -23,7 +24,7 @@ public class DeberUno {
             System.out.println("Digite 5 si desea cruzar de derecha a izquierda al observador y uvas");
             System.out.println("Digite 6 si desea cruzar de derecha a izquierda al observador y lobo");
             System.out.println("Digite 7 si desea cruzar de derecha a izquierda al observador y caperucita");
-            ingreso = Integer.parseInt(ingresoConsola.nextLine());
+            ingreso = ingresoConsola.nextInt();
             if(ingreso==1 && (izquierda[1].equals("L")&&(izquierda[2].equals("C")))){
                 System.out.println("Perdiste");
                 System.out.println("El lobo se comió a caperucita");
@@ -40,15 +41,17 @@ public class DeberUno {
                     izquierda[3] = " ";
                     derecha[0] = "O";
                     derecha[3] = "U";
+                    System.out.println("Movimientos realizados: ");
                     System.out.print(Arrays.toString(izquierda));
 				    System.out.print(" >>> ");
-				    System.out.println(Arrays.toString(derecha));
+				    System.out.print(Arrays.toString(derecha));
                     break;
                 case 2:
                     izquierda[0] = " ";
                     izquierda[1] = " ";
                     derecha[0] = "O";
                     derecha[1] = "L";
+                    System.out.println("Movimientos realizados: ");
                     System.out.print(Arrays.toString(izquierda));
 				    System.out.print(" >>> ");
 				    System.out.println(Arrays.toString(derecha));
@@ -58,6 +61,7 @@ public class DeberUno {
                     izquierda[2] = " ";
                     derecha[0] = "O";
                     derecha[2] = "C";
+                    System.out.println("Movimientos realizados: ");
                     System.out.print(Arrays.toString(izquierda));
 				    System.out.print(" >>> ");
 				    System.out.println(Arrays.toString(derecha));
@@ -65,6 +69,7 @@ public class DeberUno {
                 case 4:
                     izquierda[0] = "O";
                     derecha[0] = " ";
+                    System.out.println("Movimientos realizados: ");
                     System.out.print(Arrays.toString(izquierda));
 				    System.out.print(" >>> ");
 				    System.out.println(Arrays.toString(derecha));
@@ -74,6 +79,7 @@ public class DeberUno {
                     izquierda[3] = "U";
                     derecha[0] = " ";
                     derecha[3] = " ";
+                    System.out.println("Movimientos realizados: ");
                     System.out.print(Arrays.toString(izquierda));
 				    System.out.print(" >>> ");
 				    System.out.println(Arrays.toString(derecha));
@@ -83,6 +89,7 @@ public class DeberUno {
                     izquierda[1] = "L";
                     derecha[0] = " ";
                     derecha[1] = " ";
+                    System.out.println("Movimientos realizados: ");
                     System.out.print(Arrays.toString(izquierda));
 				    System.out.print(" >>> ");
 				    System.out.println(Arrays.toString(derecha));
@@ -92,12 +99,13 @@ public class DeberUno {
                     izquierda[2] = "C";
                     derecha[0] = " ";
                     derecha[2] = " ";
+                    System.out.println("Movimientos realizados: ");
                     System.out.print(Arrays.toString(izquierda));
 				    System.out.print(" >>> ");
 				    System.out.println(Arrays.toString(derecha));
                     break;
                 default:
-                    System.out.println("El numero ingresado es incorrecto");
+                    System.out.println("Has decidido terminar el juego");
                     bandera = false;
                     break;
             }
